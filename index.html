@@ -149,7 +149,7 @@
             const method = document.getElementById('payment-method').value;
             const phone = document.getElementById('phone-number').value;
 
-            if (amount < 1 || amount > earnedPoints) {
+            if (amount < 200 || amount > earnedPoints) {
                 alert('Invalid withdrawal amount.');
                 return;
             }
