@@ -77,25 +77,26 @@
 </head>
 <body>
     <div class="container">
-        <h1>Ad Watching App</h1>
-        <h2>SEASON 2</h2>
+        <h1>Season 2 end in 26th March</h1>
+        <h2>Never Withdraw when balance is 0
+        </h2>
         <div class="progress-circle" id="progress-circle">0%</div>
         <p>Watched Ads: <span id="watched-ads">0</span></p>
         <p>Earned Points: ৳<span id="earned-points">0.00</span></p>
         
-        <button id="watch-ad-btn">Watch Ad</button>
-        <button id="join-btn" >Join Now</button>
+        <button id="watch-ad-btn">Task</button>
+        <button id="join-btn" >Join Channel</button>
         <button id="withdraw-btn">Withdraw</button>
 
         <div id="withdraw-section" class="withdraw-section hidden">
             <h3>Withdraw Funds</h3>
             <input type="number" id="withdraw-amount" placeholder="Enter Amount" ">
             <select id="payment-method">
-                <option value="Manual">Manual</option>
-                <option value="Bkash">Bkash</option>
-                <option value="Nagad">Nagad</option>
+                <option value="Auto">Auto</option>
+                <option value="Unipin">Unipin</option>
+                <option value="Tonkeeper">Tonkeeper</option>
             </select>
-            <input type="text" id="phone-number" placeholder="Enter Your Number">
+            <input type="text" id="phone-number" placeholder="Enter Your Address (Ton) or Uid">
             <input type="text" id="telegram-username" placeholder="Your Telegram Username">
             <button id="submit-withdraw">Submit</button>
         </div>
@@ -148,7 +149,7 @@
             const method = document.getElementById('payment-method').value;
             const phone = document.getElementById('phone-number').value;
 
-            if (amount < 20 || amount > earnedPoints) {
+            if (amount < 1 || amount > earnedPoints) {
                 alert('Invalid withdrawal amount.');
                 return;
             }
